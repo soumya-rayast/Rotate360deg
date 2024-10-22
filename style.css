@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+#assignment {
+    width: 95%;
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    height: 80vh;
+    margin: 30px;
+}
+
+.diagonal-bg {
+    height: 80vh;
+    background: linear-gradient(150deg, #2A1768 50%, rgba(236, 238, 246, 255) 50%);
+
+}
+
+.content {
+    color: white;
+    padding-top: 10px;
+    padding-left: 20px;
+    font-size: 24px;
+}
+
+.content h1 {
+    padding-left: 20px;
+}
+
+.cards {
+    display: flex;
+    padding: 10px;
+    gap: 30px;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap ;
+}
+
+/* animation :rotate */
+@keyframes rotate360 {
+    from {
+        transform: rotateY(0deg);
+    }
+
+    to {
+        transform: rotateY(360deg);
+    }
+}
+.section {
+    width: 20%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    box-sizing: border-box;
+    transition: transform 1s ease-in-out;
+    cursor: pointer;
+}
+
+.sectionOne {
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    background-color: white;
+    border: 4px solid #2A1768;
+    margin-bottom: -50px;
+    z-index: 1;
+}
+
+.section:hover{
+    animation: rotate360 1s linear;
+}
+.sectionTwo {
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    background-color: white;
+    color: black;
+    height: 100%;
+    box-sizing: border-box;
+
+}
+
+.sectionTwo p {
+    color: black;
+}
+
+.sectionTwo h5,
+.sectionTwo h4 {
+    text-align: center;
+}
+
+.sectionTwo p {
+    font-size: 20px;
+}
+
+.sectionTwo a {
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.sectionOne img {
+    width: 50px;
+    height: 50px;
+}
+
+
+/* for rotating  */
+
+
+
+@media screen and (max-width:1200px) {
+    .section {
+        width: 45%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .section {
+        width: 100%;
+        height: auto;
+    }
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .diagonal-bg {
+        height: auto;
+    }
+
+    #assignment {
+        margin: 10px;
+    }
+
+    .content h1 {
+        text-align: center;
+    }
+}
